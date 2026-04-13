@@ -38,7 +38,7 @@ export default function VideoMeetComponent() {
 
   let [showModal, setModal] = useState(true);
 
-  let [screenAvailable, setScreenAvailable] = useState();
+  let [screenAvailable, setScreenAvailable] = useState(false);
 
   let [messages, setMessages] = useState([]);
 
@@ -60,9 +60,15 @@ export default function VideoMeetComponent() {
   // }
 
   useEffect(() => {
+    setScreenAvailable(
+      !!(navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia)
+    );
+  }, []);
+
+  useEffect(() => {
     console.log("HELLO");
     getPermissions();
-  });
+  }, []);
 
   let getDislayMedia = () => {
     if (screen) {
@@ -100,7 +106,7 @@ export default function VideoMeetComponent() {
         console.log("Audio permission denied");
       }
 
-      if (navigator.mediaDevices.getDisplayMedia) {
+      if (navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia) {
         setScreenAvailable(true);
       } else {
         setScreenAvailable(false);

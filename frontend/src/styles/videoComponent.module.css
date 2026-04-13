@@ -29,8 +29,8 @@
   padding: 40px;
   border-radius: 20px;
   backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 .title {
@@ -45,7 +45,7 @@
   border-radius: 14px;
   border: 2px solid #00f7ff;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(0,247,255,0.3);
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
 }
 
 /* ================= MUI INPUT ================= */
@@ -57,7 +57,7 @@
 }
 
 .whiteInput label {
-  color: rgba(255,255,255,0.8) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .whiteInput input {
@@ -116,14 +116,14 @@
   border-radius: 16px;
   object-fit: cover;
   background: black;
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease;
 }
 
 .remoteVideo:hover {
   transform: scale(1.02);
-  border: 1px solid rgba(0,247,255,0.5);
+  border: 1px solid rgba(0, 247, 255, 0.5);
 }
 
 /* ================= LOCAL VIDEO ================= */
@@ -137,7 +137,7 @@
   border: 2px solid #00f7ff;
   object-fit: cover;
   background: black;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
 
@@ -145,19 +145,19 @@
 .chatPanel {
   width: 340px;
   height: 100vh;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
-  border-left: 1px solid rgba(255,255,255,0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   flex-direction: column;
-  box-shadow: -10px 0 30px rgba(0,0,0,0.4);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
 }
 
 .chatHeader {
   padding: 15px;
   font-weight: bold;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   color: #00f7ff;
 }
 
@@ -171,7 +171,7 @@
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
   transition: 0.2s;
 }
 
@@ -208,15 +208,15 @@
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(25px);
   border-radius: 60px;
-  border: 1px solid rgba(255,255,255,0.15);
-  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
 }
 
 /* ICON BUTTON */
 .controlBtn {
   color: white !important;
   transition: 0.25s ease;
-  background: rgba(255,255,255,0.05) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .controlBtn:hover {
@@ -243,7 +243,7 @@
 /* TABLET */
 @media (max-width: 1024px) {
   .remoteVideo {
-    height: 380px;
+    height: 750px;
   }
 
   .chatPanel {
@@ -301,7 +301,7 @@
   }
 
   .remoteVideo {
-    height: 260px;
+    height: 750px;
   }
 
   /* LOCAL VIDEO (move to top-right on mobile) */
@@ -315,21 +315,21 @@
 
   /* CHAT PANEL becomes full screen overlay */
   @media (max-width: 768px) {
-  .chatPanel {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-  }
+    .chatPanel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+    }
 
-  .chatHeader {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    .chatHeader {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   }
-}
 
   /* CONTROLS */
   .controls {
@@ -347,7 +347,7 @@
   }
 
   .remoteVideo {
-    height: 220px;
+    height: 750px;
   }
 
   .controls {
@@ -355,7 +355,8 @@
     justify-content: center;
   }
 
-  .controlBtn, .endCall {
+  .controlBtn,
+  .endCall {
     transform: scale(0.9);
   }
 }
