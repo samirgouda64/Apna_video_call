@@ -151,6 +151,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: -10px 0 30px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
 }
 
 .chatHeader {
@@ -235,4 +236,126 @@
   background: red !important;
   box-shadow: 0 0 20px red;
   transform: scale(1.2);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .remoteVideo {
+    height: 380px;
+  }
+
+  .chatPanel {
+    width: 300px;
+  }
+
+  .localVideo {
+    width: 160px;
+    height: 120px;
+  }
+}
+
+.backBtn {
+  background: transparent;
+  border: none;
+  color: #00f7ff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+.backBtn:hover {
+  transform: translateX(-3px);
+  color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .mainArea {
+    flex-direction: column;
+  }
+
+  /* LOBBY */
+  .lobby {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .lobbyVideo {
+    width: 220px;
+    height: 160px;
+  }
+
+  /* VIDEO AREA */
+  .videoSection {
+    width: 100%;
+    height: calc(100vh - 120px);
+  }
+
+  .remoteGrid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .remoteVideo {
+    height: 260px;
+  }
+
+  /* LOCAL VIDEO (move to top-right on mobile) */
+  .localVideo {
+    width: 120px;
+    height: 90px;
+    bottom: auto;
+    top: 10px;
+    right: 10px;
+  }
+
+  /* CHAT PANEL becomes full screen overlay */
+  @media (max-width: 768px) {
+  .chatPanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+
+  .chatHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+  /* CONTROLS */
+  .controls {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    bottom: 10px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .remoteVideo {
+    height: 220px;
+  }
+
+  .controls {
+    width: 95%;
+    justify-content: center;
+  }
+
+  .controlBtn, .endCall {
+    transform: scale(0.9);
+  }
 }
