@@ -16,7 +16,7 @@ export const connectToSocket = (server) => {
 
   io.on("connection", (socket) => {
     // callback for anyone join through socket
-
+    console.log("SOMETHING CONNECTED");
     socket.on("join-call", (path) => {
       // emit call from client and listen in client
 
@@ -31,7 +31,7 @@ export const connectToSocket = (server) => {
       //     io.to(elem);
       // })
 
-      for (let a = 0; a < connections[path].length; i++) {
+      for (let a = 0; a < connections[path].length; a++) {
         io.to(connections[path][a]).emit(
           "user-joined",
           socket.id,
@@ -73,12 +73,12 @@ export const connectToSocket = (server) => {
           messages[matchingRoom] = [];
         }
 
-        message[matchingRoom].push({
+        messages[matchingRoom].push({
           sender: sender,
           data: data,
           "socket-id-sender": socket.id,
         });
-        console.log("message", key, ":", sender, data);
+        console.log("message", matchingRoom, ":", sender, data);
 
         connections[matchingRoom].forEach((elem) => {
           io.to(elem).emit("chat-message", data, sender, socket.id);
@@ -100,7 +100,7 @@ export const connectToSocket = (server) => {
                         io.to(connections[key][a]).emit('user-left', socket.id);
                     }
 
-                    var index = connections[key].indexof(socket.id);
+                    var index = connections[key].indexOf(socket.id);
                     connections[key].splice(index, 1);
 
                     if(connections[key].length === 0){

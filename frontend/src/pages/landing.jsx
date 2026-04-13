@@ -13,9 +13,17 @@ export default function LandingPage() {
                     <h2>Apna Video Call</h2>
                 </div>
                 <div className='navlist'>
-                    <p>Join as Guest</p>
-                    <p>Register</p>
-                    <div role='button'>
+                    <p onClick={() => {
+                        router("/aljk23")
+                    }}>Join as Guest</p>
+                    <p onClick={() => {
+                        router("/auth")
+
+                    }}>Register</p>
+                    <div onClick={() => {
+                        router("/auth")
+
+                    }} role='button'>
                         <p>Login</p>
                     </div>
                 </div>

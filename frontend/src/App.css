@@ -94,3 +94,125 @@
   height: auto;
   border-radius: 20px;
 }
+
+/* NAVBAR */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #0f172a;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.logoSection h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #38bdf8;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.history {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.history:hover {
+  color: #38bdf8;
+}
+
+.logoutBtn {
+  background: #ef4444 !important;
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 6px 18px !important;
+}
+
+.logoutBtn:hover {
+  background: #dc2626 !important;
+}
+
+/* MAIN CONTAINER */
+.meetContainer {
+  display: flex;
+  height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #0b1026, #050714);
+  color: white;
+}
+
+/* LEFT PANEL */
+.leftPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.leftPanel h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.leftPanel h1 span {
+  color: #38bdf8;
+}
+
+.leftPanel p {
+  margin-top: 15px;
+  color: #cbd5f5;
+  max-width: 500px;
+}
+
+/* JOIN BOX */
+.joinBox {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.meetingInput {
+  background: white;
+  border-radius: 8px;
+}
+
+.joinBtn {
+  background: #2563eb !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+}
+
+.joinBtn:hover {
+  background: #1d4ed8 !important;
+}
+
+/* RIGHT PANEL */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightPanel img {
+  width: 80%;
+  max-width: 500px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
