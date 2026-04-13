@@ -11,8 +11,9 @@ import CallEndIcon from '@mui/icons-material/CallEnd';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import ChatIcon from '@mui/icons-material/Chat';
+import serverUrl from '../environment';
 
-const server_url = "http://localhost:8000";
+const server_url = serverUrl;
 var connections = {};
 
 const peerConfigConnections = {
